@@ -9,6 +9,9 @@ public class CurrentConditionsDisplay : IDisplay
 {
     private readonly WeatherData weatherData;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CurrentConditionsDisplay"/> class.
+    /// </summary>
     public CurrentConditionsDisplay(WeatherData weatherData)
     {
         this.weatherData = weatherData;
@@ -20,6 +23,9 @@ public class CurrentConditionsDisplay : IDisplay
         Display();
     }
 
+    /// <summary>
+    /// Displays the weather conditions.
+    /// </summary>
     public void Display()
     {
         Console.WriteLine("Current Weather Conditions:");

@@ -9,6 +9,10 @@ public class StatisticsDisplay : IDisplay
     private readonly WeatherData weatherData;
     private readonly List<double> temperatureData = new List<double>();
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="StatisticsDisplay"/> class.
+    /// </summary>
+    /// <param name="weatherData"></param>
     public StatisticsDisplay(WeatherData weatherData)
     {
         this.weatherData = weatherData;
@@ -21,6 +25,9 @@ public class StatisticsDisplay : IDisplay
         Display();
     }
 
+    /// <summary>
+    /// Displays the weather statistics including average, maximum, and minimum temperatures.
+    /// </summary>
     public void Display()
     {
         Console.WriteLine("Weather Statistics:");
@@ -29,7 +36,7 @@ public class StatisticsDisplay : IDisplay
         Console.WriteLine($"     Min Temperature: {CalculateMinTemperature()}°C");
     }
 
-    private double CalculateAverageTemperature()
+    private int CalculateAverageTemperature()
     {
         if (temperatureData.Count == 0)
             return 0;
@@ -37,7 +44,7 @@ public class StatisticsDisplay : IDisplay
         return (int)temperatureData.Average();
     }
 
-    private double CalculateMaxTemperature()
+    private int CalculateMaxTemperature()
     {
         if (temperatureData.Count == 0)
             return 0;
@@ -45,7 +52,7 @@ public class StatisticsDisplay : IDisplay
         return (int)temperatureData.Max();
     }
 
-    private double CalculateMinTemperature()
+    private int CalculateMinTemperature()
     {
         if (temperatureData.Count == 0)
             return 0;

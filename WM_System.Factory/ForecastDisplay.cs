@@ -8,6 +8,9 @@ public class ForecastDisplay : IDisplay
 {
     private readonly WeatherData weatherData;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ForecastDisplay"/> class.
+    /// </summary>
     public ForecastDisplay(WeatherData weatherData)
     {
         this.weatherData = weatherData;
@@ -19,6 +22,9 @@ public class ForecastDisplay : IDisplay
         Display();
     }
 
+    /// <summary>
+    /// Displays the weather forecast based on the current temperature.
+    /// </summary>
     public void Display()
     {
         double currentTemperature = weatherData.Temperature;
